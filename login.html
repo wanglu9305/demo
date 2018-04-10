@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>欢迎注册</title>
+	<link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+	<header>
+		<h2>欢迎注册</h2>
+		<span>
+			已有账号？
+			<a href="index.html">请登录</a>
+		</span>
+	</header>
+	<section>
+		<form action="">
+			<hgroup>
+				<label for="user">用 户 名</label>
+				<input type="text" id="user" placeholder="您的账户和登录名">
+				<span id="span1"></span>
+			</hgroup>
+			<hgroup>
+				<label for="tel">手机号码</label>
+				<input type="text" id="tel" placeholder="请输入您的手机号">
+				<span id="span2"></span>
+			</hgroup>
+			<hgroup>
+				<label for="email">邮&nbsp&nbsp箱</label>
+				<input type="text" id="email" placeholder="请输入您的邮箱">
+				<span id="span3"></span>
+			</hgroup>
+			<hgroup>
+				<label for="pwd">设置密码</label>
+				<input type="text" id="pwd" placeholder="请输入您的密码">
+				<span id="span4"></span>
+			</hgroup>
+			<input type="button" value="注 册" id="btn">
+		</form>
+	</section>
+<script>
+	var user = document.getElementById('user'),
+		tel = document.getElementById('tel'),
+		email = document.getElementById('email'),
+		pwd = document.getElementById('pwd'),
+		btn = document.getElementById('btn');
+	user.onblur = function(){
+		var regName = /^\w{6,12}$/;   //6-12位，可以有数字 字母 下划线
+		if(regName.test(this.value)){
+			this.nextElementSibling.innerHTML = "用户名正确";
+		}else{
+			this.nextElementSibling.innerHTML = "用户名输入有误";
+		}
+	}
+	tel.onblur = function(){
+		var regTel = /^1[3-8]\d{9}$/;   //1开始，3-8中的1位数字，9位数字
+		if(regTel.test(this.value)){
+			this.nextElementSibling.innerHTML = "手机号正确";
+		}else{
+			this.nextElementSibling.innerHTML = "手机号输入有误";
+		}
+	}
+	email.onblur = function(){
+		var regEmail = /^\w+@\w{1,6}\.[0-9a-zA-Z]{2,5}$/;   //1开始，3-8中的1位数字，9位数字
+		if(regEmail.test(this.value)){
+			this.nextElementSibling.innerHTML = "邮箱正确";
+		}else{
+			this.nextElementSibling.innerHTML = "邮箱输入有误";
+		}
+	}
+	pwd.onblur = function(){
+		var regPwd = /^\w{6,12}$/;   //6-12位，可以有数字 字母 下划线
+		if(regPwd.test(this.value)){
+			this.nextElementSibling.innerHTML = "密码正确";
+		}else{
+			this.nextElementSibling.innerHTML = "密码输入有误";
+		}
+	}
+	btn.onclick = function(){
+		if(span1.innerHTML === "用户名正确"){
+			if(span2.innerHTML === "手机号正确"){
+				if(span3.innerHTML === "邮箱正确"){
+					if(span4.innerHTML === "密码正确"){
+						alert("注册成功！");
+						location.href = "index.html";
+					}else{
+						alert("密码输入错误");
+					}
+				}else{
+					alert("邮箱输入错误");
+				}
+			}else{
+				alert("手机号输入错误");
+			}
+		}else{
+			alert("用户名输入错误");
+		}
+	}
+</script>
+</body>
+</html>

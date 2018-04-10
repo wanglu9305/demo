@@ -1,0 +1,272 @@
+*{ 
+	margin: 0;
+	padding: 0;
+}
+ul{ 
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+html{
+	font-size: 62.5%;
+	background: #fff;
+}
+body{
+	line-height: 1.5;
+	font-size: 1.2rem;
+}
+::selection{ 
+	background: #b3d4fc;
+}
+a{
+	color:#666;
+	text-decoration: none;
+}
+.clearfix:after{  
+	content:"";
+	display: table;
+	clear: both;
+}
+
+/*  
+	header 
+*/
+header{
+	width: 100%;
+}
+header .top{
+	background: #555555;
+	line-height: 5rem;
+}
+header .top .top-content{
+	float: left;
+	padding: 0 2rem;
+	color: #aaaaaa;
+}
+header .top .top-content span{
+	padding: 0 1.5rem;
+}
+header .top ul{
+	text-align: right;
+}
+header .top ul li{
+	display: inline-block;
+	padding: 0 1.5rem;
+}
+header .top ul li + li{
+	border-left: 1px solid #fff;
+	line-height: 1rem;
+}
+header .top ul li a{
+	display: inline-block;
+	color: #aaaaaa;
+}
+@media only screen and (max-width: 30em){
+	header .top .top-content .dz{
+		display: none;
+	}
+	header .top ul li{
+		display: inline-block;
+		padding: 0 1rem;
+	}
+}
+header .main{ 
+	background: #999999;
+}
+header .main .logo{
+	float: left;
+	color: #fff;
+	margin-left: 120px;
+}
+header .main .logo span{
+	font-weight: bold;
+	font-size: 50px;
+	font-style: oblique;
+	font-family:Arial;
+	padding-top: 20px;
+	display: inline-block;
+}
+header .main ul{
+	text-align: right;
+}
+header .main ul li{
+	display: inline-block;
+	padding: 4rem 1.5rem;
+}
+header .main ul li a{
+	display: inline-block;
+	color: #fff;
+	font-size: 1.6rem;
+}
+@media only screen and (max-width: 50em){
+	/*屏幕尺寸小于800px时*/
+	header .main .logo{
+		float: none;
+		text-align: center;
+		margin: auto;
+	} 
+	header .main ul{
+		text-align: center;
+	}
+	header .main ul li{
+		display: inline-block;
+		padding: 2rem 1rem;
+	}
+}
+@media only screen and (max-width: 30em){
+	/*屏幕尺寸小于480px时*/
+	header .main ul li:nth-child(1){
+		display: none;
+	} 
+	header .main ul li{
+		display: inline-block;
+		padding: 2rem 0.5rem;
+	}
+}
+/*  
+	主体 
+*/
+.container{
+	width: 100%;
+}
+
+.fire-content{
+	width: 90%;
+	margin: 5rem auto;
+	font-size: 0;
+}
+.fire-content h1{
+	text-align: center;
+	font-size: 4rem;
+}
+.fire-content .item{
+	display: inline-block;
+	width: calc(33.3333333% - 3rem);
+	padding: 2rem 1rem;
+}
+.fire-content .item + .item{
+	margin-left: 1.5rem;
+}
+.fire-content .item p,
+.fire-content .item a{
+	text-align: center;
+	display: block;
+	margin: 0 auto;
+	font-size: 1.8rem;
+}
+@media only screen and (max-width: 50em){
+	.fire-content .item{
+		display: inline-block;
+		width: 100%;
+		padding: 2em 0;
+		text-align: center;
+	}
+	.fire-content .item + .item{
+		margin-left: 0;
+	}
+}
+.service{
+	padding: 3rem 0;
+	background: #555555;
+	border-bottom: 1px solid #fff;
+	font-size: 0;
+}
+.service-content{
+	width: 90%;
+	margin: 0 auto;	
+	color: #fff;
+}
+.service-content h1{
+	text-align: center;
+	font-size: 5rem;
+	color: orange;
+	font-weight: bold;
+}
+.service-content h3{
+	text-align: center;
+	font-size: 1.8rem;
+	padding: 2rem 0;
+}
+.service-content .item{
+	display: inline-block;
+	width: calc(25%);
+	padding: 2rem 0;
+}
+.service-content .item p{
+	font-size: 1.6rem;
+	text-align: center;
+}
+.service-content .item p span{
+	font-size: 3rem;
+	color: orange;
+	font-weight: bold;
+}
+.service-content p{
+	text-align: center;
+	font-size: 1.8rem;
+}
+@media only screen and (max-width: 50em){
+	.service-content .item:nth-child(3){
+		display: none;
+	}
+	.service-content .item{
+		width: calc(33.3333333%);
+	}
+}
+@media only screen and (max-width: 30em){
+	.service-content .item:nth-child(4){
+		display: none;
+	}
+	.service-content .item{
+		width: calc(50%);
+	}
+	.service-content h1{
+		font-size: 2.1rem;
+	}
+	.service-content h3{
+		font-size: 1.2rem;
+	}
+}
+/*  
+	footer 
+*/
+footer{
+	width: 100%;
+	background: #555555;
+}
+footer .footer-content{
+	width: 90%;
+	line-height: 5rem;
+	margin: 0 auto;
+}
+footer .footer-content span{
+	float: left;
+	color: #fff;
+}
+footer .footer-content ul{
+	text-align: right;
+}
+footer .footer-content ul li{
+	display: inline-block;
+	padding: 0 0.5rem;
+}
+footer .footer-content ul li a{
+	display: inline-block;
+	color: #fff;
+}
+@media only screen and (max-width: 50em){
+	footer .footer-content ul li:nth-child(3),
+	footer .footer-content ul li:nth-child(4){
+		display: none;
+	} 
+	footer .footer-content ul li{
+		display: inline-block;
+		padding: 0 0.3rem;
+	}
+}
+@media only screen and (max-width: 30em){
+	footer .footer-content span{
+		display: none;
+	}
+}
+

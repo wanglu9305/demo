@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv=X-UA-Compatible content="IE=edge">
+	<meta name='viewport' content='width=device-width,height=device-height,initial-scale=1.0'>
+	<title>房源详情</title>
+	<link rel="stylesheet" href="css/pic.css">
+</head>
+<body>
+<!--头部-->
+<header>
+	<div class="top">
+		<div class="top-content">
+			<span class="tel">客服热线:025-6666-8888</span>
+			<span class="dz">南京</span>
+		</div>
+		<ul>
+			<li><a href="index.html">登录</a></li>
+			<li><a href="login.html">注册</a></li>
+		</ul>
+	</div>
+</header>
+<!--内容-->
+<div class="container">
+	<div class="tit">
+		<div class="product-title">
+			<a href="index.html">首页 </a> &gt; <a href="resoursePage.html">三亚</a> &gt; 三楼海景大床房		
+		</div>
+	</div>
+	<div class="product-content">
+		<div class="pro">
+			<div class="pro-left">
+    			<div class="title">
+					<h1>三楼海景大床房</h1>
+					<p>房间编号：26790653 三亚海东镇金梭岛</p>
+					<p>好评率：100% 评论数：2条  最少入住：1天</p>
+				</div>
+				<div id="vPhoto" class="titleT">
+					房间照片
+				</div>
+				<div id="vMap" class="titleT">
+					地理位置
+				</div>
+				<div id="slider1" class="pro-banner">
+					<ul class="banner">
+						<li><img src="img/1.jpg"></li>
+						<li><img src="img/2.jpg"></li>
+						<li><img src="img/3.jpg"></li>
+						<li><img src="img/4.jpg"></li>
+					</ul>
+				</div>
+    		</div>
+    		<div class="pro-right">
+    			<div class="reserve">
+    				<div class="resTitle">
+    					<span>￥560.00</span>
+    					<i>每晚</i>
+    				</div>
+    				<div class="imgBox">
+    					<form action id="oForm">
+    						<dl>
+    							<dt class="dt">
+    								入住日期：
+    								<input name="from" id="from" type="text" value="2018-4-10" class="hasDatepicker">
+    							</dt>
+    						</dl>
+    						<dl>
+    							<dt class="dt">
+    								退房日期：
+    								<input name="to" id="to" type="text" value="2018-4-13" class="hasDatepicker">
+    							</dt>
+    						</dl>
+    						<button type="submmit">申请预定</button>
+    					</form>
+    				</div>
+    			</div>
+    			<div class="landlord">
+    				<div class="imgBox">
+    					<div class="imgBox1">
+    						<img src="img/per.jpg">
+    					</div>
+    					<div class="lordBox">
+    						<div class="perName">Lucy</div>
+    						<span>实名认证<i>√</i></span>
+    						<span>真实房源<i>√</i></span>
+    					</div>
+    				</div>
+    				<div class="phone">
+    					联系电话:13245674567
+    				</div>
+    			</div>
+    		</div>
+		</div>
+	</div>
+	<div class="product-facility">
+		<div class="label">
+			配套设施
+		</div>
+		<div class="main-table">
+			<ul class="ul1">
+				<li>房屋类型：客栈</li>
+				<li>可住人数：2人</li>
+				<li>床型：双人大床</li>
+				<li>入住天数：无限制</li>
+				<li>发票：不提供</li>
+			</ul>
+			<ul class="ul2">
+				<li>独立卫生间<span class="have"></span></li>
+				<li>厨房<span class="have"></span></li>
+				<li>电吹风<span class="have"></span></li>
+				<li>停车位<span class=""></span></li>
+				<li>暖气<span class=""></span></li>
+				<li>冰箱<span class="have"></span></li>
+				<li>允许聚会<span class=""></span></li>
+				<li>洗衣机<span class=""></span></li>
+				<li>24小时热水<span class="have"></span></li>
+			</ul>		
+		</div>
+	</div>
+	<div class="product-comment">
+		<div class="pro-intro">
+			<p>
+			这是一栋只有两间客服的小房子，但是它有两个奢侈的大露台，还配备有一个温馨极了的咖啡屋。来这里吧，什么都不做，面朝大海喝上一杯，是不是很适合想要慢下来的你。
+			</p>
+		</div> 
+		<div class="message">
+			<h1>留言板</h1>
+			<input type="text" id="txt">
+			<input type="button" value="留言" id="btn">
+			<div class="messageBox">
+			    <ul id="uls">
+			    </ul>
+			</div>
+		</div>
+		<div class="page" id="page"></div>
+	</div>
+</div>
+<!--页脚-->
+<footer>
+	<div class="footer-content">
+		<span>生活选址来这里，专业靠谱！</span>
+		<ul>
+			<li><a href="#">首页</a></li>
+			<li><a href="#">服务介绍</a></li>
+			<li><a href="#">友情链接</a></li>
+			<li><a href="#">常见问题</a></li>
+			<li><a href="#">联系我们</a></li>
+		</ul>
+	</div>
+</footer>
+<script src="js/jquery-1.8.js"></script>
+<script src="js/jquery.slider.js"></script>
+<script src="js/jquery.page.js"></script>
+<script src="js/message.js"></script>
+<script>
+	$(function(){
+		$("#slider1").slider({
+        	arrowControl:true
+    	});
+    	$("#page").page();
+	})
+</script>
+</body>
+</html>
